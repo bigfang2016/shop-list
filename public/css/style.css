@@ -1,0 +1,83 @@
+.site-center-out,
+.site-left-out,
+.site-right-out {
+  float: left; }
+
+#app ul {
+  width: 300px;
+  border: 2px solid #fff1cf;
+  height: 500px;
+  overflow: auto;
+  text-align: center;
+  background-color: #fbfaf5; }
+
+#app .title {
+  height: 57px;
+  width: 300px;
+  background-color: #c1d8ac;
+  position: relative; }
+
+#app h1 {
+  text-align: center;
+  color: #595857;
+  position: absolute;
+  margin: 0,auto;
+  top: 0;
+  width: 300px;
+  height: 59px; }
+
+#app li {
+  background-color: #f4dda5;
+  padding: 10px 10px 10px 80px;
+  text-align: left;
+  border: 1px solid #c0c6c9;
+  border-radius: 4px; }
+
+#app .site-center li {
+  padding-left: 50px; }
+
+#app .site-center span:first-child {
+  display: inline-block;
+  width: 120px; }
+
+#app .site-right li {
+  background-color: #c1d8ac;
+  color: #0275d8;
+  border-color: #0275d8; }
+
+#app .site-right .buy {
+  background-color: #f4dda5;
+  border-color: #c0c6c9; }
+
+#app .site-footer {
+  position: relative;
+  height: 100px;
+  background: skyblue;
+  top: -100px; }
+
+#app .site-footer .clear {
+  position: absolute;
+  bottom: 50px;
+  background-color: yellow;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px; }
+
+#app .site-footer .total {
+  position: absolute;
+  bottom: 0px;
+  background-color: skyblue;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px; }
+
+#app .select, #app .default {
+  background-color: #c1d8ac;
+  color: #0275d8;
+  border-color: #0275d8; }
+
+#app .bought {
+  color: #8e869d;
+  border-color: #8e869d; }

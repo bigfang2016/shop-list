@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>家常菜</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cormalize.css">
+</head>
+
+<body>
+	<div id="app" class="clearfix">
+			<!-- 菜谱 -->
+		<left_component :my-list="list" v-on:addells="addElls_toggleSelect" v-on:isselect="isSelect"></left_component>
+			<!-- 原料表 -->
+		<center_component :my-ells="eLLS" v-on:togglebought="toggleBought"></center_component>
+			<!-- 购物车 -->
+		<right_component :my-shops="shops" v-on:togglebuy="toggleBuy" v-on:clearcart="clearCart" :total-price="totalPrice"></right_component>
+
+	</div>
+
+	<script src="https://cdn.bootcss.com/vue/2.3.2/vue.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.16.1/axios.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
