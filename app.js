@@ -28,8 +28,8 @@ app.get('/app.json', function(req, res) {
   // res.send({ name: "mimi", age: 2})
 })
 
-app.use('/static', express.static('public'))
-app.listen(3000)
+app.use('/', express.static('public'))//'/' => http://localhost:3000/index.html 或者 '/static'  => http://localhost:3000/static/index.html
+app.listen(process.env.PORT || 3000)//使得可以在heroku上有端口
 //  app.listen(3000, function () {
 // console.log('Example app listening on port 3000!')
 // })
