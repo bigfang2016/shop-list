@@ -51,9 +51,9 @@
 
 #app .site-footer {
   position: relative;
-  height: 100px;
+  height: 50px;
   background: skyblue;
-  top: -100px; }
+  top: -51px; }
 
 #app .site-footer .clear {
   position: absolute;

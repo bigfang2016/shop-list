@@ -5,7 +5,7 @@ Vue.filter('currency', function(value) {
 
 // ------------组件-----------------
 // -----菜谱------
-Vue.component('left_component',{
+Vue.component('cookbook_component',{
     props:['myList'],
     template:`<div class="site-left-out">
     			<div class="title">
@@ -25,7 +25,7 @@ Vue.component('left_component',{
     }
 })
 // -----原料表------
-Vue.component('center_component',{
+Vue.component('material_component',{
     props:['myElls'],
     template: `<div class="site-center-out">
     			<div class="title">
@@ -45,7 +45,7 @@ Vue.component('center_component',{
     }
 })
 // -----购物车------
-Vue.component('right_component',{
+Vue.component('cart_component',{
     props:['myShops','totalPrice'],
     template:`<div class="site-right-out">
     			<div class="title">
@@ -58,7 +58,7 @@ Vue.component('right_component',{
     				</li>
     			</ul>
     			<div class="site-footer">
-    				<div class="clear" v-on:click="clearcart">清空购物车</div>
+
     				<div class="total">共计 <span>{{totalPrice | currency}}</span></div>
     			</div>
     		</div>`,
@@ -98,7 +98,7 @@ let app = new Vue({
   mounted() { //mounted: function () {}的简写
     let that = this
     axios.get('../app.json').then(function(data) {
-      that.list = data.data.list //两个data 为什么？
+      that.list = data.data.list
     })
   },
   methods: {
@@ -141,7 +141,10 @@ let app = new Vue({
       shop.isBought = !shop.isBought;
     },
     clearCart() {
-      this.shops = []; //为何此处清空，竟然可以把已经在购物车内的物品重新渲染为空？
+      this.shops = [];
+    //   this.eLLS = [];
+    //   console.log(this.eLLS);
+    //   <div class="clear" v-on:click="clearcart">清空购物车</div>
     }
   },
   computed: {

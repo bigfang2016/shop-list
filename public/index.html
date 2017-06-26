@@ -11,11 +11,11 @@
 <body>
 	<div id="app" class="clearfix">
 			<!-- 菜谱 -->
-		<left_component :my-list="list" v-on:addells="addElls_toggleSelect" v-on:isselect="isSelect"></left_component>
+		<cookbook_component :my-list="list" v-on:addells="addElls_toggleSelect" v-on:isselect="isSelect"></cookbook_component>
 			<!-- 原料表 -->
-		<center_component :my-ells="eLLS" v-on:togglebought="toggleBought"></center_component>
+		<material_component :my-ells="eLLS" v-on:togglebought="toggleBought"></material_component>
 			<!-- 购物车 -->
-		<right_component :my-shops="shops" v-on:togglebuy="toggleBuy" v-on:clearcart="clearCart" :total-price="totalPrice"></right_component>
+		<cart_component :my-shops="shops" v-on:togglebuy="toggleBuy" v-on:clearcart="clearCart" :total-price="totalPrice"></cart_component>
 
 	</div>
 
